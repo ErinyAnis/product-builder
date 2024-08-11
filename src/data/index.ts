@@ -1,8 +1,9 @@
 import { IFormInput, IProduct } from "../interfaces";
+import { v4 as uuid } from "uuid";
 
 export const productList: IProduct[] = [
   {
-    id: 1,
+    id: uuid(),
     title: "Smartphone XYZ",
     description:
       "A high-end smartphone with a sleek design and powerful features. It includes a 6.5-inch OLED display, a 48MP triple camera system, 5G connectivity, and a long-lasting battery. Perfect for photography enthusiasts and tech-savvy individuals who need a reliable device for both work and play.",
@@ -17,7 +18,7 @@ export const productList: IProduct[] = [
     },
   },
   {
-    id: 2,
+    id: uuid(),
     title: "Laptop ABC",
     description:
       "A lightweight laptop with excellent performance and battery life. Featuring a 14-inch Retina display, Intel Core i7 processor, 16GB RAM, and 512GB SSD. Ideal for professionals and students who require a powerful yet portable computer for their daily tasks and creative projects.",
@@ -32,7 +33,7 @@ export const productList: IProduct[] = [
     },
   },
   {
-    id: 3,
+    id: uuid(),
     title: "Wireless Headphones",
     description:
       "Noise-cancelling wireless headphones with superior sound quality. Equipped with advanced noise-cancellation technology, 30 hours of battery life, and comfortable over-ear design. Perfect for music lovers and professionals who need to focus in noisy environments.",
@@ -47,7 +48,7 @@ export const productList: IProduct[] = [
     },
   },
   {
-    id: 4,
+    id: uuid(),
     title: "Smartwatch",
     description:
       "A stylish smartwatch with health monitoring features. Includes a heart rate monitor, sleep tracking, GPS, and customizable watch faces. Compatible with both Android and iOS devices, making it a great accessory for fitness enthusiasts and tech-savvy individuals.",
@@ -62,7 +63,7 @@ export const productList: IProduct[] = [
     },
   },
   {
-    id: 5,
+    id: uuid(),
     title: "Tablet",
     description:
       "A high-resolution tablet with a fast processor. Features a 10.5-inch display, 256GB storage, and support for a stylus pen. Ideal for digital artists, students, and professionals who need a versatile device for work, entertainment, and creative projects.",
@@ -77,7 +78,7 @@ export const productList: IProduct[] = [
     },
   },
   {
-    id: 6,
+    id: uuid(),
     title: "Bluetooth Speaker",
     description:
       "A portable Bluetooth speaker with deep bass and crystal-clear sound. Water-resistant design with a 12-hour battery life, making it perfect for outdoor activities and parties. Connects easily to any Bluetooth-enabled device for seamless music streaming.",
@@ -119,3 +120,21 @@ export const formInputsList: IFormInput[] = [
     type: "text",
   },
 ];
+
+export const colors:string[] = [
+  "#a855f7",
+  "#2563eb",
+  "#84d265",
+  "#f97316",
+  "#34d399",
+  "#ef4444",
+  "#60a5fa",
+  "#facc15",
+  "#10b981",
+  "#8b5cf6",
+  "#d946ef",
+  "#3b82f6",
+  "#fb923c",
+  "#f87171",
+];
+

@@ -32,11 +32,11 @@ export const productValidation = (product: {
   // description
   if (
     !product.description.trim() ||
-    product.description.length < 10 ||
+    product.description.length < 120 ||
     product.description.length > 900
   ) {
     errors.description =
-      "Product description must be between 10 and 900 characters!";
+      "Product description must be between 120 and 900 characters!";
   }
 
 //   imageURL
