@@ -9,6 +9,7 @@ import { productValidation } from "./validation";
 import ErrorMessage from "./components/ErrorMessage";
 import CircleColor from "./components/CircleColor";
 import { v4 as uuid } from "uuid";
+import {Select}  from "./components/Ui/Select";
 
 const App = () => {
   const defaultProductObj = {
@@ -155,6 +156,7 @@ const App = () => {
       <Modal isOpen={isOpen} closeModal={closeModal} title="ADD A NEW PRODUCT">
         <form className="space-y-3" onSubmit={submitHandler}>
           {renderFormInputList}
+          <Select />
           <div className="flex flex-wrap items-center">
             {renderProductColors}
           </div>
@@ -169,6 +171,7 @@ const App = () => {
               </span>
             ))}
           </div>
+
           <div className="flex items-center space-x-3">
             <Button className="bg-indigo-700 hover:bg-indigo-900">
               Submit

@@ -1,4 +1,4 @@
-import { IFormInput, IProduct } from "../interfaces";
+import { ICategory, IFormInput, IProduct } from "../interfaces";
 import { v4 as uuid } from "uuid";
 
 export const productList: IProduct[] = [
@@ -121,7 +121,7 @@ export const formInputsList: IFormInput[] = [
   },
 ];
 
-export const colors:string[] = [
+export const colors: string[] = [
   "#a855f7",
   "#2563eb",
   "#84d265",
@@ -138,3 +138,41 @@ export const colors:string[] = [
   "#f87171",
 ];
 
+export const categories:ICategory[] = [
+  {
+    id: uuid(),
+    name: "Laptops",
+    imageURL:
+      "https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: uuid(),
+    name: "Smartphones",
+    imageURL:
+      "https://images.pexels.com/photos/3999536/pexels-photo-3999536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: uuid(),
+    name: "Tablets",
+    imageURL:
+      "https://images.pexels.com/photos/1334598/pexels-photo-1334598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: uuid(),
+    name: "Smartwatches",
+    imageURL:
+      "https://images.pexels.com/photos/393047/pexels-photo-393047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: uuid(),
+    name: "Cameras",
+    imageURL:
+      "https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: uuid(),
+    name: "Headphones",
+    imageURL:
+      "https://images.pexels.com/photos/205926/pexels-photo-205926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+];
