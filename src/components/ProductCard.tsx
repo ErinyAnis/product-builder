@@ -8,6 +8,7 @@ interface IProps {
   product: IProduct;
   setProductToEdit: (product: IProduct) => void;
   openEditModal: () => void;
+  openConfirmModal: () => void;
   idx: number;
   setProductToEditIdx: (value: number) => void;
 }
@@ -16,6 +17,7 @@ const ProductCard = ({
   product,
   setProductToEdit,
   openEditModal,
+  openConfirmModal,
   idx,
   setProductToEditIdx,
 }: IProps) => {
@@ -31,6 +33,11 @@ const ProductCard = ({
     setProductToEdit(product);
     openEditModal();
     setProductToEditIdx(idx);
+  };
+
+  const onDelete = () => {
+    setProductToEdit(product);
+    openConfirmModal();
   };
 
   return (
@@ -62,13 +69,15 @@ const ProductCard = ({
 
       <div className="flex items-center justify-between space-x-2 mt-5">
         <Button
-          className="bg-indigo-700 hover:bg-indigo-900"
+          className="bg-indigo-700 hover:bg-indigo-900 text-white"
           width="w-full"
           onClick={onEdit}
         >
           Edit
         </Button>
-        <Button className="bg-red-800 hover:bg-red-900">Delete</Button>
+        <Button className="bg-red-800 hover:bg-red-900 text-white" onClick={onDelete}>
+          Delete
+        </Button>
       </div>
     </div>
   );
