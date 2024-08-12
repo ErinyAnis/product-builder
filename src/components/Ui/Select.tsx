@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import {
   Label,
   Listbox,
@@ -10,10 +9,19 @@ import {
 } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { categories } from "../../data";
+import { ICategory } from "../../interfaces";
 
-export const Select = () => {
-  const [selected, setSelected] = useState(categories[0]);
+interface IProps {
+  selected: { name: string; imageURL: string };
+  setSelected: (category: ICategory) => void;
+}
 
+// function classNames(...classes:string[]) {
+//   return classes.filter(Boolean).join(" ");
+// }
+
+export const Select = ({ selected, setSelected }: IProps) => {
+  console.log(selected);
   return (
     <Listbox value={selected} onChange={setSelected}>
       <Label className="block text-sm font-medium text-gray-900">
@@ -68,5 +76,3 @@ export const Select = () => {
     </Listbox>
   );
 };
-
-

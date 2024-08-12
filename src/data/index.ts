@@ -10,11 +10,11 @@ export const productList: IProduct[] = [
     imageURL:
       "https://images.unsplash.com/photo-1598965402089-897ce52e8355?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: "999.99",
-    colors: ["Black", "Silver", "Gold"],
+    colors: ["#000000", "#ef4444", "#a855f7", "#f97316"],
     category: {
-      name: "Electronics",
+      name: "Smartphones",
       imageURL:
-        "https://images.unsplash.com/photo-1598965402089-897ce52e8355?q=80&w=1936&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.pexels.com/photos/3999536/pexels-photo-3999536.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   },
   {
@@ -25,11 +25,11 @@ export const productList: IProduct[] = [
     imageURL:
       "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: "1499.99",
-    colors: ["Gray", "Blue"],
+    colors: ["#f87171", "#fb923c","#facc15"],
     category: {
-      name: "Electronics",
+      name: "Laptops",
       imageURL:
-        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.pexels.com/photos/205421/pexels-photo-205421.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   },
   {
@@ -40,11 +40,11 @@ export const productList: IProduct[] = [
     imageURL:
       "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: "299.99",
-    colors: ["Black", "White"],
+    colors: ["#000000", "#f97316",],
     category: {
-      name: "Electronics",
+      name: "Headphones",
       imageURL:
-        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.pexels.com/photos/205926/pexels-photo-205926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   },
   {
@@ -55,11 +55,11 @@ export const productList: IProduct[] = [
     imageURL:
       "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: "199.99",
-    colors: ["Black", "Rose Gold"],
+    colors: ["#000000", "#ef4444", "#d946ef"],
     category: {
-      name: "Electronics",
+      name: "Smartwatches",
       imageURL:
-        "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1999&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.pexels.com/photos/393047/pexels-photo-393047.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   },
   {
@@ -70,11 +70,11 @@ export const productList: IProduct[] = [
     imageURL:
       "https://images.unsplash.com/photo-1464380573004-8ca85a08751a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: "499.99",
-    colors: ["Silver", "Gold"],
+    colors: ["#60a5fa", "#000000"],
     category: {
-      name: "Electronics",
+      name: "Tablets",
       imageURL:
-        "https://images.unsplash.com/photo-1464380573004-8ca85a08751a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.pexels.com/photos/1334598/pexels-photo-1334598.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   },
   {
@@ -85,11 +85,11 @@ export const productList: IProduct[] = [
     imageURL:
       "https://images.unsplash.com/photo-1594501432907-91214bfdd928?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     price: "99.99",
-    colors: ["Red", "Blue", "Black"],
+    colors: ["#10b981", "#d946ef", "#000000"],
     category: {
-      name: "Electronics",
+      name: "Speakers",
       imageURL:
-        "https://images.unsplash.com/photo-1594501432907-91214bfdd928?q=80&w=2073&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "https://images.pexels.com/photos/5310539/pexels-photo-5310539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     },
   },
 ];
@@ -133,7 +133,7 @@ export const colors: string[] = [
   "#10b981",
   "#8b5cf6",
   "#d946ef",
-  "#3b82f6",
+  "#000000",
   "#fb923c",
   "#f87171",
 ];
@@ -174,5 +174,11 @@ export const categories:ICategory[] = [
     name: "Headphones",
     imageURL:
       "https://images.pexels.com/photos/205926/pexels-photo-205926.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+  },
+  {
+    id: uuid(),
+    name: "Speakers",
+    imageURL:
+      "https://images.pexels.com/photos/5310539/pexels-photo-5310539.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },
 ];

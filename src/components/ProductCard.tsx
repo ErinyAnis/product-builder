@@ -6,15 +6,32 @@ import Button from "./Ui/Button";
 
 interface IProps {
   product: IProduct;
+  setProductToEdit: (product: IProduct) => void;
+  openEditModal: () => void;
+  idx: number;
+  setProductToEditIdx: (value: number) => void;
 }
 
-const ProductCard = ({ product }: IProps) => {
+const ProductCard = ({
+  product,
+  setProductToEdit,
+  openEditModal,
+  idx,
+  setProductToEditIdx,
+}: IProps) => {
   const { title, description, imageURL, price, colors, category } = product;
 
   /*______ Render ______*/
   const renderProductColors = colors.map((color) => (
     <CircleColor key={color} color={color} />
   ));
+
+  /*______ Handler ______*/
+  const onEdit = () => {
+    setProductToEdit(product);
+    openEditModal();
+    setProductToEditIdx(idx);
+  };
 
   return (
     <div className="mx-auto border rounded-md p-2 flex flex-col">
@@ -29,21 +46,26 @@ const ProductCard = ({ product }: IProps) => {
         {txtSlicer(description)}
       </p>
 
-      <div className="flex items-center my-4">
-        {renderProductColors}
-      </div>
+      <div className="flex items-center my-4">{renderProductColors}</div>
 
       <div className="flex items-center justify-between">
-        <span>{price}</span>
-        <Image
-          imageURL={category.imageURL}
-          alt={category.name}
-          className="w-10 h-10 rounded-full object-cover"
-        />
+        <span>${price}</span>
+        <div className="flex items-center gap-x-1">
+          <span>{category.name}</span>
+          <Image
+            imageURL={category.imageURL}
+            alt={category.name}
+            className="w-10 h-10 rounded-full object-cover"
+          />
+        </div>
       </div>
 
       <div className="flex items-center justify-between space-x-2 mt-5">
-        <Button className="bg-indigo-700 hover:bg-indigo-900" width="w-full">
+        <Button
+          className="bg-indigo-700 hover:bg-indigo-900"
+          width="w-full"
+          onClick={onEdit}
+        >
           Edit
         </Button>
         <Button className="bg-red-800 hover:bg-red-900">Delete</Button>

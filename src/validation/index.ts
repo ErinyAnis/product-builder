@@ -23,20 +23,20 @@ export const productValidation = (product: {
   // title
   if (
     !product.title.trim() ||
-    product.title.length < 10 ||
+    product.title.length < 6 ||
     product.title.length > 80
   ) {
-    errors.title = "Product Title must be between 10 and 80 characters!";
+    errors.title = "Product Title must be between 6 and 80 characters!";
   }
 
   // description
   if (
     !product.description.trim() ||
-    product.description.length < 120 ||
+    product.description.length < 70 ||
     product.description.length > 900
   ) {
     errors.description =
-      "Product description must be between 120 and 900 characters!";
+      "Product description must be between 70 and 120 characters!";
   }
 
 //   imageURL
