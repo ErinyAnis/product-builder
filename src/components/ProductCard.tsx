@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { IProduct } from "../interfaces";
 import { txtSlicer } from "../utils/functions";
 import CircleColor from "./CircleColor";
@@ -75,7 +76,10 @@ const ProductCard = ({
         >
           Edit
         </Button>
-        <Button className="bg-red-800 hover:bg-red-900 text-white" onClick={onDelete}>
+        <Button
+          className="bg-red-800 hover:bg-red-900 text-white"
+          onClick={onDelete}
+        >
           Delete
         </Button>
       </div>
@@ -83,4 +87,4 @@ const ProductCard = ({
   );
 };
 
-export default ProductCard;
+export default memo(ProductCard);

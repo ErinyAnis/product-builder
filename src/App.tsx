@@ -1,4 +1,4 @@
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, FormEvent, useCallback } from "react";
 import ProductCard from "./components/ProductCard";
 import Button from "./components/Ui/Button";
 import Modal from "./components/Ui/Modal";
@@ -12,6 +12,7 @@ import { v4 as uuid } from "uuid";
 import { Select } from "./components/Ui/Select";
 import { TProductNames } from "./types";
 import toast, { Toaster } from 'react-hot-toast';
+
 
 const App = () => {
   const defaultProductObj = {
@@ -54,22 +55,22 @@ const App = () => {
   };
 
   // edit modal handler
-  const closeEditModal = () => {
+  const closeEditModal = useCallback(() => {
     setIsOpenEditModal(false);
-  };
+  },[]);
 
-  const openEditModal = () => {
+  const openEditModal = useCallback(() => {
     setIsOpenEditModal(true);
-  };
+  },[]);
 
   // delete product modal handler
   const closeConfirmModal = () => {
     setIsOpenConfirmModal(false);
   };
 
-  const openConfirmModal = () => {
+  const openConfirmModal = useCallback(() => {
     setIsOpenConfirmModal(true);
-  };
+  },[]);
 
   const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     const { value, name } = event.target;
