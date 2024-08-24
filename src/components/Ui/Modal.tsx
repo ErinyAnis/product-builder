@@ -1,5 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react";
-import { Fragment, ReactNode } from "react";
+import { Fragment, memo, ReactNode } from "react";
 
 interface IProps {
   isOpen: boolean;
@@ -9,8 +9,13 @@ interface IProps {
   description?: string;
 }
 
-const Modal = ({ isOpen, closeModal, title, description, children }: IProps) => {
-
+const Modal = ({
+  isOpen,
+  closeModal,
+  title,
+  description,
+  children,
+}: IProps) => {
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>
@@ -47,11 +52,13 @@ const Modal = ({ isOpen, closeModal, title, description, children }: IProps) => 
                       {title}
                     </Dialog.Title>
                   )}
-                  {description && <div className="mt-2 text-sm text-gray-500">{description}</div>} 
+                  {description && (
+                    <div className="mt-2 text-sm text-gray-500">
+                      {description}
+                    </div>
+                  )}
 
-                  <div className="mt-4">
-                   {children}
-                  </div>
+                  <div className="mt-4">{children}</div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
@@ -62,4 +69,4 @@ const Modal = ({ isOpen, closeModal, title, description, children }: IProps) => 
   );
 };
 
-export default Modal;
+export default memo(Modal);

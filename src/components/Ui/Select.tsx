@@ -10,6 +10,7 @@ import {
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
 import { categories } from "../../data";
 import { ICategory } from "../../interfaces";
+import { memo } from "react";
 
 interface IProps {
   selected: { name: string; imageURL: string };
@@ -20,7 +21,7 @@ interface IProps {
 //   return classes.filter(Boolean).join(" ");
 // }
 
-export const Select = ({ selected, setSelected }: IProps) => {
+const Select = ({ selected, setSelected }: IProps) => {
   console.log(selected);
   return (
     <Listbox value={selected} onChange={setSelected}>
@@ -76,3 +77,5 @@ export const Select = ({ selected, setSelected }: IProps) => {
     </Listbox>
   );
 };
+
+export default memo(Select);

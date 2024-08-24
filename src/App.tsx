@@ -9,10 +9,9 @@ import { productValidation } from "./validation";
 import ErrorMessage from "./components/ErrorMessage";
 import CircleColor from "./components/CircleColor";
 import { v4 as uuid } from "uuid";
-import { Select } from "./components/Ui/Select";
+import Select from "./components/Ui/Select";
 import { TProductNames } from "./types";
-import toast, { Toaster } from 'react-hot-toast';
-
+import toast, { Toaster } from "react-hot-toast";
 
 const App = () => {
   const defaultProductObj = {
@@ -28,6 +27,7 @@ const App = () => {
   };
 
   /*______ state ______*/
+  // const inputRef = useRef<null | HTMLInputElement>(null);
   const [products, setProducts] = useState<IProduct[]>(productList);
   const [product, setProduct] = useState<IProduct>(defaultProductObj);
   const [productToEdit, setProductToEdit] =
@@ -55,13 +55,13 @@ const App = () => {
   };
 
   // edit modal handler
-  const closeEditModal = useCallback(() => {
+  const closeEditModal = () => {
     setIsOpenEditModal(false);
-  },[]);
+  };
 
   const openEditModal = useCallback(() => {
     setIsOpenEditModal(true);
-  },[]);
+  }, []);
 
   // delete product modal handler
   const closeConfirmModal = () => {
@@ -70,21 +70,16 @@ const App = () => {
 
   const openConfirmModal = useCallback(() => {
     setIsOpenConfirmModal(true);
-  },[]);
+  }, []);
 
-  const onChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-    const { value, name } = event.target;
+  const onChangeHandler = useCallback(
+    (event: ChangeEvent<HTMLInputElement>) => {
+      const { value, name } = event.target;
 
-    setProduct({
-      ...product,
-      [name]: value,
-    });
+      setProduct((prev) => ({ ...prev, [name]: value }));
 
-    setErrors({
-      ...errors,
-      [name]: "",
-    });
-  };
+      setErrors((prev) => ({ ...prev, [name]: "" }));
+    },[]);
 
   const onChangeEditHandler = (event: ChangeEvent<HTMLInputElement>) => {
     const { value, name } = event.target;
@@ -106,17 +101,19 @@ const App = () => {
   };
 
   const removeProductHandler = () => {
-    const filtered = products.filter((product) => product.id !== productToEdit.id);
+    const filtered = products.filter(
+      (product) => product.id !== productToEdit.id
+    );
     setProducts(filtered);
     closeConfirmModal();
     toast("Product has been deleted successfully", {
-      icon: '✔️',
+      icon: "✔️",
       style: {
         backgroundColor: "#000000",
-        color: "white"
-      }
+        color: "white",
+      },
     });
-  }
+  };
 
   const submitHandler = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
@@ -153,11 +150,11 @@ const App = () => {
     setTempColors([]);
     closeModal();
     toast("Product has been added successfully", {
-      icon: '✔️',
+      icon: "✔️",
       style: {
         backgroundColor: "#000000",
-        color: "white"
-      }
+        color: "white",
+      },
     });
   };
 
@@ -193,11 +190,11 @@ const App = () => {
     setTempColors([]);
     closeEditModal();
     toast("Product has been edited successfully", {
-      icon: '✔️',
+      icon: "✔️",
       style: {
         backgroundColor: "#000000",
-        color: "white"
-      }
+        color: "white",
+      },
     });
   };
 
@@ -294,6 +291,7 @@ const App = () => {
 
       <div className="m-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 md:gap-4 p-2 rounded-md">
         {renderProductList}
+        {/* <Input ref={inputRef} /> */}
       </div>
 
       {/* Add Product Modal */}
